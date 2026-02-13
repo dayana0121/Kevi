@@ -3,7 +3,10 @@ const pedido = document.querySelector(".pedido");
 const audio = document.getElementById("musica");
 
 /* Flecha */
-
+document.addEventListener("click", () => {
+        activarMusica();
+        }, { once: true });
+})
 function mostrarSeccion() {
     const inicio = document.querySelector(".inicio");
     const pedido = document.getElementById("seccionPedido");
