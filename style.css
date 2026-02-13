@@ -34,7 +34,7 @@ body {
     padding: 40px;
     border-radius: 20px; /* Bordes rectos con una ligera curva dan aspecto de papel */
     width: 450px;
-    height: 500px;
+    height: 700px;
     box-shadow: 0 20px 30px rgba(0,0,0,0.1), inset 0 0 100px rgba(255,192,203,0.2);
     border: 1px solid rgba(255,182,193,0.5);
     position: relative;

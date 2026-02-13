@@ -2,11 +2,6 @@ const inicio = document.querySelector(".inicio");
 const pedido = document.querySelector(".pedido");
 const audio = document.getElementById("musica");
 
-/* Música al primer clic */
-document.body.addEventListener("click", () => {
-    audio.play();
-}, { once: true });
-
 /* Flecha */
 
 function mostrarSeccion() {
