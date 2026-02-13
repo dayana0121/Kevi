@@ -2,7 +2,7 @@ const inicio = document.querySelector(".inicio");
 const pedido = document.querySelector(".pedido");
 const audio = document.getElementById("musica");
 
-/* Flecha *
+/* Flecha */
 
 function activarMusica() {
         // Intentamos reproducir el audio
