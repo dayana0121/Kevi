@@ -19,7 +19,7 @@ function activarMusica() {
                                             document.addEventListener("click", () => {
                                                 activarMusica();
                                                 }, { once: true }); // El 'once: true' hace que este evento solo se dispare una vez
-}
+
 
 function mostrarSeccion() {
     const inicio = document.querySelector(".inicio");
@@ -51,7 +51,6 @@ function huir() {
                                                     btnNo.style.left = x + "px";
                                                         btnNo.style.top = y + "px";
                                                         }
-}
 
 function lanzarConfeti() {
     const container = document.getElementById("confetti-container");
