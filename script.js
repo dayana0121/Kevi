@@ -2,11 +2,25 @@ const inicio = document.querySelector(".inicio");
 const pedido = document.querySelector(".pedido");
 const audio = document.getElementById("musica");
 
-/* Flecha */
-document.addEventListener("click", () => {
-        activarMusica();
-        }, { once: true });
-})
+/* Flecha *
+
+function activarMusica() {
+        // Intentamos reproducir el audio
+            audio.play().then(() => {
+                    console.log("Música reproduciéndose correctamente");
+                        }).catch(error => {
+                                // El navegador bloqueó el autoplay (esto es normal)
+                                        console.log("Esperando interacción del usuario para sonar...");
+                                            });
+                                            }
+
+                                            // 3. EVENTO: Escuchar el primer clic en la pantalla
+                                            // Esto "desbloquea" el sonido en navegadores como Chrome o Safari
+                                            document.addEventListener("click", () => {
+                                                activarMusica();
+                                                }, { once: true }); // El 'once: true' hace que este evento solo se dispare una vez
+}
+
 function mostrarSeccion() {
     const inicio = document.querySelector(".inicio");
     const pedido = document.getElementById("seccionPedido");
