@@ -17,24 +17,23 @@ function mostrarSeccion() {
 }
 
 // ... (funciones anteriores igual) ...
-
 function huir() {
-    const btnNo = document.getElementById("btnNo");
-    
-    // Margen de seguridad para que no toque los bordes (50px)
-    const margen = 150;
-    
-    // Calculamos posiciones restando el ancho del botón y el margen
-    const x = Math.random() * (window.innerWidth - btnNo.offsetWidth - margen);
-    const y = Math.random() * (window.innerHeight - btnNo.offsetHeight - margen);
+        const btnNo = document.getElementById("btnNo");
+            
+                // Usamos márgenes más pequeños para móvil
+                    const margen = 20;
+                        
+                            // Calculamos el espacio disponible restando el tamaño del botón
+                                const maxX = window.innerWidth - btnNo.offsetWidth - margen;
+                                    const maxY = window.innerHeight - btnNo.offsetHeight - margen;
 
-    // Aseguramos que x e y no sean menores al margen
-    const finalX = Math.max(margen, x);
-    const finalY = Math.max(margen, y);
+                                        const x = Math.max(margen, Math.random() * maxX);
+                                            const y = Math.max(margen, Math.random() * maxY);
 
-    btnNo.style.position = "fixed";
-    btnNo.style.left = finalX + "px";
-    btnNo.style.top = finalY + "px";
+                                                btnNo.style.position = "fixed";
+                                                    btnNo.style.left = x + "px";
+                                                        btnNo.style.top = y + "px";
+                                                        }
 }
 
 function lanzarConfeti() {
