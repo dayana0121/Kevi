@@ -29,12 +29,13 @@ body {
 
 /* CARTA */
 .carta {
+    margin: 30px;
     backdrop-filter: blur(8px); /* Efecto de vidrio esmerilado */
     background: rgba(255, 255, 245, 0.9); /* Más blanco crema */
     padding: 40px;
     border-radius: 20px; /* Bordes rectos con una ligera curva dan aspecto de papel */
     width: 450px;
-    height: 650px;
+    height: 570px;
     box-shadow: 0 20px 30px rgba(0,0,0,0.1), inset 0 0 100px rgba(255,192,203,0.2);
     border: 1px solid rgba(255,182,193,0.5);
     position: relative;
@@ -54,19 +55,19 @@ body {
 */
 .kevi {
     font-family: 'Great Vibes', cursive;
-    font-size: 3.5rem;
+    font-size: 50px;
     color: #ff4d6d;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-    margin-top: -20px;
+    margin-top: -35px;
 }
 
 .text{ 
-    font-size: 20px; 
+    font-size: 19px; 
     text-align: left; } 
 
 .text1{ 
-    font-size: 20px; 
+    font-size: 19px; 
     text-align: left; 
     margin-top: -8px; }
 
@@ -159,7 +160,7 @@ body {
 .petal:nth-child(16) { left: 98%; animation-duration: 12s; animation-delay: 3s; }
 
 /* Si quieres que se vean más naturales, dales tamaños distintos a algunos */
-.petal:nth-child(12), .petal:nth-child(15), .petal:nth-child(3) {
+.petal:nth-child(12), .petal:nth-child(15), .petal:nth-child(3), .petal:nth-child(13), .petal:nth-child(7) {
     font-size: 35px; /* Más grandes */
     opacity: 0.5;    /* Un poco más transparentes para que parezcan estar atrás */
 }
@@ -213,7 +214,7 @@ body {
 
 .contenido-celebracion img {
     width: 250px;
-    height: 240px;
+    height: 230px;
     border-radius: 20px;
     margin-top: 20px;
 }
@@ -222,11 +223,12 @@ body {
     font-family: 'Great Vibes', cursive;
     font-size: 40px;
     color: #f22626;
+    margin-bottom: -10px;
 }
 .contenido-celebracion p {
     font-size: 22px;
     color: #555;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
 /* Botones con estilo */
@@ -250,6 +252,11 @@ button {
     background: #ff4d6d;
     color: white;
     box-shadow: 0 10px 20px rgba(255, 77, 109, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.btn-si:hover {
+    transform: scale(1.2);
 }
 
 /* ... (Todo tu CSS anterior se mantiene, añade esto al final) */
@@ -269,12 +276,13 @@ button {
     inset: 0;
     width: 100%;
     height: 100vh;
-    background: #fff0f3;
+    background: #fddfff99;
     z-index: 30;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
+    transition: opacity 0.5s;
 }
 
 .contenido-celebracion img {
@@ -291,6 +299,7 @@ button {
     width: 10px;
     height: 10px;
     z-index: 1001;
+    margin-top: -60px;
     animation: fall-confetti linear forwards;
 }
 

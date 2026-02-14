@@ -71,7 +71,7 @@ function lanzarConfeti() {
         // Eliminar para no sobrecargar la página
         setTimeout(() => {
             confetti.remove();
-        }, 4000);
+        }, 6000);
     }
 }
 
@@ -79,14 +79,20 @@ function celebrar() {
     const pedido = document.getElementById("seccionPedido");
     const celebracion = document.getElementById("seccionCelebracion");
 
-    // Ocultamos la sección de pedido y mostramos la de celebración
-    pedido.style.display = "none";
-    celebracion.style.display = "flex";
-    
-    // Forzamos la opacidad para la transición
-    setTimeout(() => {
-        celebracion.style.opacity = "1";
-    }, 50);
+    // 1. Desvanecemos la pregunta
+    pedido.style.opacity = "0";
 
-    lanzarConfeti();
+    // 2. Esperamos a que termine de desaparecer (500ms)
+    setTimeout(() => {
+        pedido.style.display = "none";
+        celebracion.style.display = "flex";
+        
+        // 3. Justo cuando empieza a aparecer la celebración...
+        setTimeout(() => {
+            celebracion.style.opacity = "1";
+            // ¡Lanzamos el confeti aquí! 
+            lanzarConfeti(); 
+        }, 50);
+        
+    }, 300);
 }
